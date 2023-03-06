@@ -68,7 +68,7 @@ pxs = getProxies(proxyURL)
 proxyPool = cycle(pxs)
 
 userAgentList = []
-useragents = open("useragents.txt", "r")
+useragents = open("C:/Users/bradsun/fam_research/Automated-Fundamental-Analysis/useragents.txt", "r")
 
 for line in useragents:
     userAgentList.append(line.replace('\n', ''))
