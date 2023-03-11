@@ -214,7 +214,7 @@ def get_metric_grade(sector, metric_name, metric_val):
         if lessThan == False and metric_val > comparison:
             return grade
             
-    return 'C'
+    return 'C' # Brad: don't understand here, why return C if the above condition-comparison process doen't return any results?
 
 
 def get_category_grades(ticker, sector):
@@ -315,7 +315,9 @@ def export_to_csv(filename):
       
        
 get_company_data(URL, debug=False)
-
+"""return a value-filled dataframe with Columns called allStockData: 
+No.,Ticker,Company,Country,Dividend,Industry,PEG,Price,ROA,ROE,RSI,SMA20,SMA200,SMA50
+"""
 get_sector_data()
 
 get_stock_rating_data()
