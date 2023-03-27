@@ -1,9 +1,4 @@
 
-__author__ = 'Faizan Ahmed'
-__email__ = 'faizan.ahmed18@stjohns.edu'
-__date__  = '2022/04/05'
-
-
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
