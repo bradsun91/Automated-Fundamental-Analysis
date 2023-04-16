@@ -209,7 +209,23 @@ def get_metric_grade(sector, metric_name, metric_val):
         if lessThan == False and metric_val > comparison:
             return grade
             
-    return 'C' # Brad: don't understand here, why return C if the above condition-comparison process doen't return any results?
+    return 'C' 
+
+# # GPT3's result: 
+# def get_metric_grade(sector, metric_name, metric_val):
+
+#     global sector_data
+
+#     lessThan = metric_name in ['Fwd P/E', 'PEG', 'P/S', 'P/B', 'P/FCF', 'Volatility M']
+
+#     start, change = sector_data[sector][metric_name]['10Pct'], sector_data[sector][metric_name]['Std']
+
+#     if lessThan:
+#         score = (start - metric_val) / change
+#     else:
+#         score = (metric_val - start) / change
+
+#     return score
 
 
 def get_category_grades(ticker, sector):
