@@ -211,7 +211,6 @@ def get_metric_grade(sector, metric_name, metric_val):
             
     return 'C' 
 
-# # GPT3's result: 
 # def get_metric_grade(sector, metric_name, metric_val):
 
 #     global sector_data
