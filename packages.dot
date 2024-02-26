@@ -1,0 +1,6 @@
+digraph "packages" {
+rankdir=BT
+charset="utf-8"
+"Automated-Fundamental-Analysis" [color="black", label=<Automated-Fundamental-Analysis>, shape="box", style="solid"];
+"Automated-Fundamental-Analysis.stockgrader" [color="black", label=<Automated-Fundamental-Analysis.stockgrader>, shape="box", style="solid"];
+}

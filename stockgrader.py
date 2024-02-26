@@ -1,9 +1,4 @@
 
-__author__ = 'Faizan Ahmed'
-__email__ = 'faizan.ahmed18@stjohns.edu'
-__date__  = '2022/04/05'
-
-
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -68,7 +63,7 @@ pxs = getProxies(proxyURL)
 proxyPool = cycle(pxs)
 
 userAgentList = []
-useragents = open("useragents.txt", "r")
+useragents = open("C:/Users/bradsun/fam_research/Automated-Fundamental-Analysis/useragents.txt", "r")
 
 for line in useragents:
     userAgentList.append(line.replace('\n', ''))
@@ -214,7 +209,22 @@ def get_metric_grade(sector, metric_name, metric_val):
         if lessThan == False and metric_val > comparison:
             return grade
             
-    return 'C'
+    return 'C' 
+
+# def get_metric_grade(sector, metric_name, metric_val):
+
+#     global sector_data
+
+#     lessThan = metric_name in ['Fwd P/E', 'PEG', 'P/S', 'P/B', 'P/FCF', 'Volatility M']
+
+#     start, change = sector_data[sector][metric_name]['10Pct'], sector_data[sector][metric_name]['Std']
+
+#     if lessThan:
+#         score = (start - metric_val) / change
+#     else:
+#         score = (metric_val - start) / change
+
+#     return score
 
 
 def get_category_grades(ticker, sector):
@@ -315,7 +325,9 @@ def export_to_csv(filename):
       
        
 get_company_data(URL, debug=False)
-
+"""return a value-filled dataframe with Columns called allStockData: 
+No.,Ticker,Company,Country,Dividend,Industry,PEG,Price,ROA,ROE,RSI,SMA20,SMA200,SMA50
+"""
 get_sector_data()
 
 get_stock_rating_data()
